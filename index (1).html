@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario de registro</title>
+	
+    <LINK REL=StyleSheet HREF="styles.css" TYPE="text/css" MEDIA=screen>
+
+    <script src="index.js"></script>
+
+    
+    
+  </head>
+  <body>
+    <h1>Formulario de registro</h1>
+    <form onsubmit="return validarRegistro()">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" onblur="validarNombre()" />
+      <div class="error" id="nombreError"></div>
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" onblur="validarCorreo()" />
+      <div class="error" id="correoError"></div>
+
+      <label for="contrasena">Contraseña:</label>
+      <input
+        type="password"
+        id="contrasena"
+        name="contrasena"
+        onblur="validarContrasena()"
+      />
+      <div class="error" id="contrasenaError"></div>
+
+      <label for="contrasenaConfirm">Confirmar Contraseña:</label>
+      <input
+        type="password"
+        id="contrasenaConfirm"
+        name="contrasenaConfirm"
+        onblur="validarConfirmContrasena()"
+      />
+      <div class="error" id="contrasenaConfirmError"></div>
+
+      <input type="submit" value="Registrarse" />
+    </form>
+  </body>
+</html>
